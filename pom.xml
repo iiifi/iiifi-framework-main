@@ -714,24 +714,6 @@
 		</resources>
 		<outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory>
 		<plugins>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<appendAssemblyId>false</appendAssemblyId>
-					<descriptors>
-						<descriptor>src/main/resources/assembly/package.xml</descriptor>
-					</descriptors>
-					<executions>
-						<execution>
-							<id>make-assembly</id>
-							<phase>package</phase>
-							<goals>
-								<goal>single</goal>
-							</goals>
-						</execution>
-					</executions>
-				</configuration>
-			</plugin>
 			<!-- Compiler 插件, 设定JDK版本 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -764,7 +746,6 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 				<!-- <executions> <execution> <phase>prepare-package</phase> <goals> 
 					<goal>jar</goal> </goals> <configuration> <classesDirectory>${project.outputDirectory}</classesDirectory> 
